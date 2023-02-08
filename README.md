@@ -325,8 +325,18 @@ otus  feature@bookmark_v2            enabled                        local
 
 #### 3. Работа со снапшотами.
 
-
-
+Загрузка файла, восстановление файловой системы:
+```
+# wget -O otus_task2.file --no-check-certificate https://drive.google.com/u/0/uc?id=1gH8gCL9y7Nd5Ti3IRmplZPF1XjzxeRAG&export=download
+```
+```
+# zfs receive otus/test@today < otus_task2.file
+```
+Поиск файла и просмотр его содержимого:
+```
+# cat $(find /otus/test -name secret_message)
+https://github.com/sindresorhus/awesome
+```
 
 
 
